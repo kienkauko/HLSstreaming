@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Streaming</title>
+<!--
+    <link href="https://cdn.jsdelivr.net/npm/hls.js@latest" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+<body>
+<video id="player" class="video-js vjs-default-skin" height="720" width="1280" controls preload="none">
+	<!--source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"
+
+	<source src="http://localhost:8080/hls/stream.m3u8" type="application/x-mpegURL">
+</video>
+<script>
+    var player = videojs('#player'); -->
+
+<link href="https://unpkg.com/video.js/dist/video-js.min.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Video.js Example Embed</h1>
+
+  <video-js id="my_video_1" class="vjs-default-skin" controls preload="auto" width="640" height="268">
+    <source src="http://192.168.0.115:8080/hls/stream.m3u8" type="application/x-mpegURL">
+  </video-js>
+ <!--
+	<script src="video.js"></script>
+	<script src="videojs-http-streaming.min.js"></script>
+-->
+
+  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+  <script src="https://unpkg.com/@videojs/http-streaming/dist/videojs-http-streaming.js"></script>
+  <script>
+    var player = videojs('my_video_1');
+  </script>
+  
+</body>
+</html>
+
+
