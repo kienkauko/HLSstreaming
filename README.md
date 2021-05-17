@@ -20,4 +20,7 @@ Using motion to stream from USB camera to ip:host
 > framerate 1000
 > width 640
 > height 480
-
+  
+# VLC STREAMING  
+command line:
+> cvlc -vvv v4l2:///dev/video0:chroma=mjpg --v4l2-width 640 --v4l2-height 480 --sout '#transcode{vcodec=mp2v,acodec=mpga,fps=30}:rtp{mux=ts,sdp=rtsp://:8888/live.sdp}
